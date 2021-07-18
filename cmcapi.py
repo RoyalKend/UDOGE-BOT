@@ -34,7 +34,7 @@ def total_supply(symbol):
     session = requests.Session()
     session.headers.update(headers)
     r = session.get(udogeurl, params=parameters)
-    data = r.json()['data']['UDOGE']['quote']['USD']['price']['total_supply']
+    data = r.json()['data']['UDOGE']['total_supply']
     return data
 
 
